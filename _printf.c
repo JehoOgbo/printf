@@ -1,3 +1,4 @@
+
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
@@ -12,47 +13,32 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0, j, sum = 0;
-	char *c, d;
 	printer funcs[] = {
 		{"c", print_char},
 		{"s", print_str},
-		{"%", print_perc},
 		{"d", print_int},
 		{"i", print_int}
-	};
+		};
 
 	va_start(args, format);
-
-	while (format && format[i])
+	for (; format && format[i]; i++)
 	{
-		j = 0;
 		if (format[i] != '%' && format[i - 1] != '%')
-		{
-			d = format[i];
-			c = &d;
-			write(1, c, 1);
-			sum++;
-		}
+			sum += _putchar(format[i]);
+		else if (format[i] == '%' && format[i - 1] == '%')
+			sum += _putchar(format[i]);
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
-		{
-			d = format[i];
-			c = &d;
-			write(1, c, 1);
-			sum++;
-		}
+			sum += _putchar(format[i]);
 		else
-		{
-			while (j < 5)
+			for (j = 0; j < 4; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
 				{
 					sum += funcs[j].print(args);
 					break;
 				}
-				j++;
 			}
-		}
-		i++;
 	}
+	va_end(args);
 	return (sum);
 }

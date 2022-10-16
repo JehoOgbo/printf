@@ -20,7 +20,9 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_char(va_list arg);
 int print_str(va_list arg);
-int print_perc(va_list arg);
 int print_int(va_list arg);
+char *reverse(char *s);
+char *itoa(int);
+int count_char(int n);
 
 #endif /*MAIN_H*/
