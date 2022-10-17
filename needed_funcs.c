@@ -10,8 +10,8 @@
  */
 int print_char(va_list arg)
 {
-	char c = va_arg(arg, int);
-	char *s = &c;
+	unsigned char c = va_arg(arg, int);
+	unsigned char *s = &c;
 
 	write(1, s, 1);
 	return (1);
@@ -25,7 +25,7 @@ int print_char(va_list arg)
  */
 int _strlen(char *c)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; c[i]; i++)
 		;

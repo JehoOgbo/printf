@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		{"s", print_str},
 		{"d", print_int},
 		{"i", print_int}
-		};
+	};
 
 	va_start(args, format);
 	for (; format && format[i]; i++)

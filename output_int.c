@@ -22,13 +22,19 @@ char *itoa(int n)
 	{
 		s = malloc(sizeof(char) * (a + 2));
 		if (s == NULL)
+		{
+			free(s);
 			return (NULL);
+		}
 	}
 	else
 	{
 		s = malloc(sizeof(char) * (a + 1));
 		if (s == NULL)
+		{
+			free(s);
 			return (NULL);
+		}
 	}
 	do {
 		s[i++] = n % 10 + '0';

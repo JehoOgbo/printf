@@ -111,7 +111,7 @@ char *itoa(int n)
 	i = 0;
 	do {
 		s[i++] = n % 10 + '0';
-		i++;
+		/*i++;remove*/
 	} while ((n /= 10) > 0);
 	if (sign < 0)
 		s[i++] = '-';
