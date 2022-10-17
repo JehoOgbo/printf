@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * _printf - prints formatted output
@@ -16,7 +17,8 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_str},
 		{"d", print_int},
-		{"i", print_int}
+		{"i", print_int},
+		{"b", print_binary}
 	};
 
 	va_start(args, format);
@@ -30,7 +32,7 @@ int _printf(const char *format, ...)
 			sum += _putchar(format[i]);
 		else
 		{
-			for (j = 0; j < 4; j++)
+			for (j = 0; j < 5; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
 				{
