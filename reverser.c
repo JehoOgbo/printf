@@ -8,7 +8,8 @@
  */
 char *reverse(char *s)
 {
-	int c, i, j;
+	unsigned int i, j;
+	unsigned char c;
 
 	for (i = 0, j = _strlen(s) - 1; i < j; i++, j--)
 	{

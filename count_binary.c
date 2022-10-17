@@ -8,7 +8,7 @@
  */
 unsigned int count_binary(unsigned int b)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (b > 0)
 	{

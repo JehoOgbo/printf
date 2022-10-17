@@ -23,7 +23,7 @@ int print_char(va_list arg)
  *
  * Return: length of string
  */
-int _strlen(char *c)
+unsigned int _strlen(char *c)
 {
 	unsigned int i;
 

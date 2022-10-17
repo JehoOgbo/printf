@@ -11,7 +11,7 @@
 int print_str(va_list arg)
 {
 	char *d = va_arg(arg, char *);
-	int n;
+	unsigned int n;
 
 	n = _strlen(d);
 	write(1, d, n);
