@@ -1,4 +1,3 @@
-
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
@@ -30,6 +29,7 @@ int _printf(const char *format, ...)
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
 		else
+		{
 			for (j = 0; j < 4; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
+		}
 	}
 	va_end(args);
 	return (sum);

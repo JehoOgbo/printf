@@ -15,24 +15,23 @@ char *itoa(int n)
 	char *s, *c;
 
 	sign = n;
-	if ((sign) < 0)
+	if (sign < 0)
 		n = -n;
 	a = count_char(n);
 	if (sign < 0)
 	{
-		s = malloc(a + 2);
+		s = malloc(sizeof(char) * (a + 2));
 		if (s == NULL)
 			return (NULL);
 	}
 	else
 	{
-		s = malloc(a + 1);
+		s = malloc(sizeof(char) * (a + 1));
 		if (s == NULL)
 			return (NULL);
 	}
 	do {
 		s[i++] = n % 10 + '0';
-		i++;
 	} while ((n /= 10) > 0);
 	if (sign < 0)
 		s[i++] = '-';
@@ -55,5 +54,6 @@ int print_int(va_list arg)
 	c = itoa(a);
 	len = _strlen(c);
 	write(1, c, len);
+	free(c);
 	return (len);
 }
