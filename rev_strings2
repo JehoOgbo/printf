@@ -1,0 +1,4 @@
+*/
+int print_reverse(va_list arg)
+{
+	char *s, *c = va_arg(arg, char *);
