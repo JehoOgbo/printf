@@ -17,7 +17,7 @@ char *int_to_binary(unsigned int n)
 	a = count_binary(n);
 	s = malloc(sizeof(char) * (a + 1));
 	if (s == NULL)
-		return (NULL);
+		return (-1);
 	do {
 		s[i++] = n % 2 + '0';
 	} while (n /= 2);
