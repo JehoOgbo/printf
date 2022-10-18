@@ -23,10 +23,11 @@ int print_str(va_list arg);
 int print_int(va_list arg);
 char *reverse(char *s);
 char *itoa(int);
-int count_char(int n);
+int count_char(unsigned int n);
 int print_binary(va_list arg);
 unsigned int count_binary(unsigned int b);
 char *int_to_binary(unsigned int n);
-int print_unsigned(unsigned int);
+int print_unsigned(va_list arg);
+char *uitoa(unsigned int n);
 
 #endif /*MAIN_H*/

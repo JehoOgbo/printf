@@ -6,7 +6,7 @@
  *
  * Return: amount of characters
  */
-int count_char(int n)
+int count_char(unsigned int n)
 {
 	int divisor = 1, count = 0;
 
