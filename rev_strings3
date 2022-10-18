@@ -1,0 +1,4 @@
+unsigned int i = 0, n;
+
+	n = _strlen(c);
+	s = reverse(c);
