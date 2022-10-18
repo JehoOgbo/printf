@@ -1,0 +1,17 @@
+
+	do {
+		s[i++] = n % 10 + '0';
+	} while ((n /= 10) > 0);
+	if (sign < 0)
+		s[i++] = '-';
+	s[i] = '\0';
+	c = reverse(s);
+	return (c);
+}
+/**
+ * print_int - prints an integer
+ * @arg: integer argument to be printed
+ *
+ * Return: number of characters printed
+ */
+int print_int(va_list arg)
