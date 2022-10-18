@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 	};
 
 	va_start(args, format);
-	if (!format || (format[0] == '%'&& !format[1]))/*check for NULL char*/
+	if (!format || (format[0] == '%' && !format[1]))/*check for NULL char*/
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
 		else
-		{
 			for (j = 0; j < 5; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
@@ -44,7 +43,6 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-		}
 	}
 	va_end(args);
 	return (sum);
