@@ -1,0 +1,4 @@
+* @b: number to be converted
+ *
+ * Return: number of binary digits that can be derived
+ */
