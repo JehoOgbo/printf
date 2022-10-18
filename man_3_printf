@@ -1,0 +1,44 @@
+Printf manual page
+
+NAME
+	Printf
+
+SYNOPSIS
+	#include "main.h"
+
+	printf(char *format, ...)
+
+DESCRIPTION
+	The prinft function writes output following a format string passed
+	into it as an argument and inputs other string literals following
+	length, conversion specifiers and various other criteria.
+
+Format of the format string
+	Input is passed in the form of a string which may xontain special
+	characters such as '%' which is used to pass coded information about
+	the type of argument to be received by the function and the action t
+	be performed on it. An example is the format specifier "%s" which
+	specifies that a string is to be passsed to the function and
+	formatted as output.
+
+CONVERSION SPECIFIERS
+	Conversion specifiers show the kind of output to be generated while
+	the function performs the necessary operations. They are as follows:
+
+	s	This specifies that a string is to be outputted by the
+		functuon receiving a string literal as argument
+	c	This specifies the integr argument be converted into an
+		unsigned int and outputted to the screen. It takes a single
+		character as argument
+	d, i	These specify that a signed integer value is to be printed
+	%	when this is encountered a % sign is to be printed
+	b	this converts an unsigned integer into a binary value
+
+RETURN VALUES
+	The printf() function outputs the number of characters printed
+	excluding the terminating null byte in strings when completed.
+	Returns a negative value upon failure.
+
+AUTHORS
+	Urom Jehoshaphat Ogbonnia
+	Gomina Ozomata
