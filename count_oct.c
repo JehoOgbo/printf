@@ -8,12 +8,12 @@
  */
 unsigned int count_oct(unsigned int o)
 {
-  unsigned int count = 0;
+	unsigned int count = 0;
 
-  while (o > 0)
-    {
-      o /= 8;
-      count++;
-    }
-  return (count);
+	while (o > 0)
+	{
+		o /= 8;
+		count++;
+	}
+	return (count);
 }

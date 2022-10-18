@@ -20,7 +20,9 @@ int _printf(const char *format, ...)
 		{"i", print_int},
 		{"b", print_binary},
 		{"u", print_unsigned},
-		{"o", print_oct}
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_HEX}
 	};
 
 	va_start(args, format);
@@ -37,7 +39,7 @@ int _printf(const char *format, ...)
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
 		else
-			for (j = 0; j < 7; j++)
+			for (j = 0; j < 9; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
 				{

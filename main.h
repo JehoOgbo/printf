@@ -31,5 +31,8 @@ int print_unsigned(va_list arg);
 char *uitoa(unsigned int n);
 int print_oct(va_list arg);
 unsigned int count_oct(unsigned int);
+unsigned int count_hex(unsigned int);
+int print_hex(va_list arg);
+int print_HEX(va_list arg);
 
 #endif /*MAIN_H*/
