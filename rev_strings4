@@ -1,0 +1,4 @@
+while (s[i])
+		_putchar(s[i++]);
+	return(n);
+}
