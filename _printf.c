@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
 		else
-			for (j = 0; j < 6; j++)
+			for (j = 0; j < 7; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
 				{

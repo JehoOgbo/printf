@@ -23,7 +23,7 @@ char *itoocta(unsigned int n)
     }
   do {
     s[i++] = n % 8 + '0';
-  } while ((n /= 10) > 0);
+  } while ((n /= 8) > 0);
   s[i] = '\0';
   c = reverse(s);
   return (c);

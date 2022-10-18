@@ -41,8 +41,9 @@ int print_unsigned(va_list arg)
 	char *c;
 
 	a = va_arg(arg, unsigned int);
-	c = itoa(a);
+	c = uitoa(a);
 	len = _strlen(c);
+	write(1, c, len);
 	free(c);
 	return (len);
 }
