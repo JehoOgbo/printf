@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 		{"s", print_str},
 		{"d", print_int},
 		{"i", print_int},
-		{"b", print_binary}
+		{"b", print_binary}/* about to add new file*/
 	};
 
 	va_start(args, format);
