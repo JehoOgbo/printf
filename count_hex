@@ -1,0 +1,4 @@
+#include "main.h"
+
+/**
+ * count_binary - counts amount of binary digits gotten from decimal number
