@@ -1,0 +1,11 @@
+{
+	int a, len;
+	char *c;
+
+	a = va_arg(arg, int);
+	c = itoa(a);
+	len = _strlen(c);
+	write(1, c, len);
+	free(c);
+	return (len);
+}
