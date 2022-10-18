@@ -14,15 +14,10 @@ int _printf(const char *format, ...)
 	va_list args;
 	int i = 0, j, sum = 0;
 	printer funcs[] = {
-		{"c", print_char},
-		{"s", print_str},
-		{"d", print_int},
-		{"i", print_int},
-		{"b", print_binary},
-		{"u", print_unsigned},
-		{"o", print_oct},
-		{"x", print_hex},
-		{"X", print_HEX}
+		{"c", print_char}, {"s", print_str}, {"d", print_int},
+		{"i", print_int}, {"b", print_binary}, {"u", print_unsigned},
+		{"o", print_oct}, {"x", print_hex}, {"X", print_HEX},
+		{"r", print_reverse}, {"R", print_rot13}
 	};
 
 	va_start(args, format);
@@ -38,8 +33,10 @@ int _printf(const char *format, ...)
 			sum += _putchar(format[i]);
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
+		/**else if (format[i] = 'S' && format[i - 1] == '%')
+		   sum += print_hex_ascii(format[i + 1]);*/
 		else
-			for (j = 0; j < 9; j++)
+			for (j = 0; j < 11; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
 				{

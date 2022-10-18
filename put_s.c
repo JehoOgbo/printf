@@ -11,9 +11,11 @@
 int print_str(va_list arg)
 {
 	char *d = va_arg(arg, char *);
-	unsigned int n;
+	unsigned int i = 0, n;
 
 	n = _strlen(d);
-	write(1, d, n);
+	while (d[i])
+		_putchar(d[i++]);
+	/*write(1, d, n);*/
 	return (n);
 }

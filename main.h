@@ -2,6 +2,11 @@
 #define MAIN_H
 
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+
+#define BUF_SIZE 1024
+#define BUF_FLUSH -1
 /**
  * struct printr - holds information on symbol and corresponding function
  * @symbol: symbol standing to perform an operation
@@ -16,7 +21,7 @@ typedef struct printr
 } printer;
 
 int _strlen(char *);
-int _putchar(char c);
+int _putchar(int c);
 int _printf(const char *format, ...);
 int print_char(va_list arg);
 int print_str(va_list arg);
@@ -34,5 +39,9 @@ unsigned int count_oct(unsigned int);
 unsigned int count_hex(unsigned int);
 int print_hex(va_list arg);
 int print_HEX(va_list arg);
+int print_hex_ascii(char);
+int print_reverse(va_list arg);
+char *rot13(char *c);
+int print_rot13(va_list arg);
 
 #endif /*MAIN_H*/
