@@ -29,5 +29,7 @@ unsigned int count_binary(unsigned int b);
 char *int_to_binary(unsigned int n);
 int print_unsigned(va_list arg);
 char *uitoa(unsigned int n);
+int print_oct(va_list arg);
+unsigned int count_oct(unsigned int);
 
 #endif /*MAIN_H*/
