@@ -15,5 +15,6 @@ int print_rot13(va_list arg)
 	len = _strlen(c);
 	while (c[i])
 		_putchar(c[i++]);
+	free(c);
 	return (len);
 }

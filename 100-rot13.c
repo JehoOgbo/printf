@@ -16,9 +16,11 @@ char *rot13(char *c)
 	int lens;
 	char fstr[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
 	char chstr[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+	char *s;
 
 	len = strlen(c);
 	lens = strlen(fstr);
+	s = malloc(sizeof(char) * (len + 1));
 	for (count = 0; count < len; count++)
 	{
 		for (counter = 0; counter < lens; counter++)
@@ -26,10 +28,11 @@ char *rot13(char *c)
 
 			if (c[count] == fstr[counter])
 			{
-				c[count] = chstr[counter];
+				s[count] = chstr[counter];
 				break;
 			}
 		}
 	}
-	return (c);
+	s[count] = '\0';
+	return (s);
 }
