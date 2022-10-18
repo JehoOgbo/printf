@@ -3,6 +3,17 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+printer funcs[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"d", print_int},
+		{"i", print_int},
+		{"b", print_binary},
+		{"u", print_unsigned},
+		{"o", print_octal},
+		{"x", print_s_hex},
+		{"X", print_b_hex}
+	};
 /**
  * _printf - prints formatted output
  * @format: string to be formatted and printed
@@ -13,13 +24,6 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0, j, sum = 0;
-	printer funcs[] = {
-		{"c", print_char},
-		{"s", print_str},
-		{"d", print_int},
-		{"i", print_int},
-		{"b", print_binary}
-	};
 
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))/*check for NULL char*/
@@ -35,7 +39,6 @@ int _printf(const char *format, ...)
 		else if (format[i - 2] == '%' && format[i - 1] == '%')
 			sum += _putchar(format[i]);
 		else
-		{
 			for (j = 0; j < 5; j++)
 			{
 				if (*(format + i + 1) == *(funcs[j].symbol))
@@ -44,7 +47,6 @@ int _printf(const char *format, ...)
 					break;
 				}
 			}
-		}
 	}
 	va_end(args);
 	return (sum);
