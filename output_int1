@@ -1,0 +1,7 @@
+/**
+ * itoa - convert n to character array
+ * @n: number to be converted
+ *
+ * Return: character array formed
+ */
+char *itoa(int n)
